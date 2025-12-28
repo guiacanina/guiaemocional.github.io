@@ -1,10 +1,10 @@
 :root {
-  --color-principal: #2563eb;
-  --color-secundario: #1e40af;
-  --fondo: #f8fafc;
-  --texto: #1f2937;
-  --gris: #6b7280;
-  --blanco: #ffffff;
+  --primary: #2563eb;
+  --secondary: #1e40af;
+  --bg: #f8fafc;
+  --text: #1f2937;
+  --gray: #6b7280;
+  --white: #ffffff;
 }
 
 * {
@@ -15,39 +15,35 @@
 }
 
 body {
-  background-color: var(--fondo);
-  color: var(--texto);
+  background: var(--bg);
+  color: var(--text);
   line-height: 1.75;
 }
 
-/* HEADER */
 header {
-  background: linear-gradient(135deg, var(--color-principal), var(--color-secundario));
-  color: var(--blanco);
-  padding: 70px 20px;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  color: white;
   text-align: center;
+  padding: 70px 20px;
 }
 
 header h1 {
   font-size: 2.6rem;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 }
 
 header p {
-  font-size: 1.1rem;
   opacity: 0.95;
 }
 
-/* CONTENEDOR */
 main {
   max-width: 900px;
   margin: 50px auto;
   padding: 0 20px;
 }
 
-/* SECCIONES */
 section {
-  background: var(--blanco);
+  background: white;
   padding: 30px;
   margin-bottom: 30px;
   border-radius: 12px;
@@ -55,32 +51,19 @@ section {
 }
 
 section h2 {
-  color: var(--color-principal);
+  color: var(--primary);
   margin-bottom: 15px;
-  font-size: 1.6rem;
 }
 
 section h3 {
   margin-top: 20px;
   margin-bottom: 8px;
-  color: var(--texto);
 }
 
-section p {
-  margin-bottom: 15px;
-  color: var(--texto);
-}
-
-section ul {
+ul {
   padding-left: 20px;
-  margin-bottom: 15px;
 }
 
-section ul li {
-  margin-bottom: 8px;
-}
-
-/* TARJETAS INDEX */
 .cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -88,53 +71,20 @@ section ul li {
 }
 
 .card {
-  background: var(--blanco);
+  background: white;
   padding: 25px;
   border-radius: 14px;
   box-shadow: 0 8px 20px rgba(0,0,0,0.05);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 14px 30px rgba(0,0,0,0.1);
-}
-
-.card h2 {
-  font-size: 1.3rem;
-  margin-bottom: 10px;
-}
-
-.card p {
-  color: var(--gris);
 }
 
 .card a {
-  display: inline-block;
-  margin-top: 15px;
-  color: var(--color-principal);
+  color: var(--primary);
   font-weight: 600;
   text-decoration: none;
 }
 
-.card a:hover {
-  text-decoration: underline;
-}
-
-/* FOOTER */
 footer {
   text-align: center;
-  padding: 30px 15px;
-  color: var(--gris);
+  color: var(--gray);
+  padding: 30px;
 }
-
-footer a {
-  color: var(--color-principal);
-  text-decoration: none;
-  margin: 0 5px;
-}
-
-footer a:hover {
-  text-decoration: underline;
-}
-
